@@ -28,7 +28,7 @@
         </div>
         <div class="px-5 text-lg basis-1/2">
           <div>
-            <p>Questions? Reach us through our many soical media accounts!</p>
+            <p>Questions? Reach us through our many social media accounts!</p>
           </div>
           <div class="grid grid-cols-3 pt-14 gap-14">
             <div>

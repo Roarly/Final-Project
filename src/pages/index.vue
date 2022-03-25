@@ -18,10 +18,10 @@
     </h2>
     <img src="../assets/Homeart.png" />
   </div>
-  <div v-if="!isAuthenticated" class="pt-6 animate-bounce hover:animate-none">
+  <div v-if="!isAuthenticated" class="pt-14 animate-bounce hover:animate-none">
     <router-link to="/login"
       ><h3
-        class="px-5 py-4 font-semibold text-center bg-gray-300 rounded-2xl hover:cursor-pointer hover:bg-slate-500 hover:text-white"
+        class="px-5 py-3 font-semibold text-center bg-gray-300 rounded-2xl hover:cursor-pointer hover:bg-slate-500 hover:text-white"
       >
         New or returning user? Click here to login or create an account to
         purchase some of our cool new merch!

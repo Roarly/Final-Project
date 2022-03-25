@@ -1,12 +1,3 @@
-<script setup>
+<script setup></script>
 
-
-</script>
-
-<template>
-<div class="min-h-screen bg-blue-100">
-
-Product Page
-merchandise goes here
-</div>
-</template>
+<template>Product Page merchandise goes here</template>
