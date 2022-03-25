@@ -33,32 +33,56 @@
           <div class="grid grid-cols-3 pt-14 gap-14">
             <div>
               <a href="https://www.facebook.com/"
-                ><img height="64" width="64" src="../assets/facebook.png"
+                ><img
+                  class="duration-300 ease-in-out transiton hover:scale-125"
+                  height="64"
+                  width="64"
+                  src="../assets/facebook.png"
               /></a>
             </div>
             <div>
               <a href="https://www.instagram.com/"
-                ><img height="64" width="64" src="../assets/insta.png"
+                ><img
+                  class="duration-300 ease-in-out transiton hover:scale-125"
+                  height="64"
+                  width="64"
+                  src="../assets/insta.png"
               /></a>
             </div>
             <div>
               <a href="https://www.linkedin.com/"
-                ><img height="64" width="64" src="../assets/linkedin.png"
+                ><img
+                  class="duration-300 ease-in-out transiton hover:scale-125"
+                  height="64"
+                  width="64"
+                  src="../assets/linkedin.png"
               /></a>
             </div>
             <div>
               <a href="https://www.pinterest.com/"
-                ><img height="64" width="64" src="../assets/pintrest.png"
+                ><img
+                  class="duration-300 ease-in-out transiton hover:scale-125"
+                  height="64"
+                  width="64"
+                  src="../assets/pintrest.png"
               /></a>
             </div>
             <div>
               <a href="https://www.gmail.com/"
-                ><img height="64" width="64" src="../assets/gmail.png"
+                ><img
+                  class="duration-300 ease-in-out transiton hover:scale-125"
+                  height="64"
+                  width="64"
+                  src="../assets/gmail.png"
               /></a>
             </div>
             <div>
               <a href="https://www.twitter.com/"
-                ><img height="64" width="64" src="../assets/twitter.png"
+                ><img
+                  class="duration-300 ease-in-out transiton hover:scale-125"
+                  height="64"
+                  width="64"
+                  src="../assets/twitter.png"
               /></a>
             </div>
           </div>
