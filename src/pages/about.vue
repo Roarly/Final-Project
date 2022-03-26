@@ -12,7 +12,7 @@
         height="450"
         width="450"
       />
-      <div class="pt-4 font-semibold">Michael Scott, CEO/Creator & Owner</div>
+      <div class="pt-4 font-semibold">Michael Scott, CEO/Creator + Owner</div>
       <div class="flex flex-row pt-12">
         <div class="px-5 text-lg border-r-2 border-slate-800 basis-1/2">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui tenetur

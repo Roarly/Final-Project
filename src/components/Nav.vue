@@ -1,6 +1,6 @@
 <template>
   <div class="font-serif text-gray-700 bg-zinc-800">
-    <div class="container flex items-center justify-between py-4 mx-auto">
+    <div class="container flex items-center justify-between py-5 mx-auto">
       <h1 class="text-3xl font-light tracking-tight text-gray-400">
         Final<span class="font-semibold">Project</span>
       </h1>
