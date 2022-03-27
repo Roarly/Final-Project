@@ -16,7 +16,7 @@
     <h2 v-else class="text-6xl tracking-tighter pt-14 font-extralight">
       Welcome {{ user }}, lets get you some merch!
     </h2>
-    <img src="../assets/Homeart.png" />
+    <img src="../assets/HomeArt.png" />
   </div>
   <div
     v-if="!isAuthenticated"
