@@ -48,6 +48,14 @@
         >
           Login
         </button>
+        <button
+          @click="google"
+          class="flex justify-center py-2 bg-white rounded-lg hover:bg-gray-500"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+          />
+        </button>
       </form>
     </div>
     <div
