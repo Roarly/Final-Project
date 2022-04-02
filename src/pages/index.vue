@@ -1,6 +1,6 @@
 <script setup>
-//import useAuth from '../composables/useAuth';
-//const { isAuthenticated, user } = useAuth();
+import useAuth from "../composables/useAuth";
+const { isAuthenticated, user } = useAuth();
 </script>
 
 <template>
