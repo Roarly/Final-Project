@@ -4,12 +4,21 @@ import { useRouter } from "vue-router";
 import useAuth from "../composables/useAuth";
 import useError from "../composables/useError";
 
-const { isAuthenticated, login } = useAuth();
+const { isAuthenticated, login, signup } = useAuth();
 const username = ref("");
 const password = ref("");
 const router = useRouter();
-const logginIn = () => {
-  login(username.value, password.value);
+const logginIn = async () => {
+  await login(username.value, password.value);
+  goToHome();
+};
+
+const signingUp = async () => {
+  await signup(username.value, password.value);
+  goToHome();
+};
+
+const goToHome = () => {
   if (isAuthenticated.value) {
     router.push("/");
   } else {
@@ -45,13 +54,22 @@ const { ready, start } = useTimeout(3000, { controls: true });
           placeholder="Password"
           v-model="password"
         />
-        <button
-          @submit.prevent="logginIn"
-          type="submit"
-          class="py-2 text-white rounded-lg bg-zinc-800 hover:bg-zinc-500"
-        >
-          Login
-        </button>
+        <div class="flex space-x-2">
+          <button
+            @submit.prevent="logginIn"
+            type="submit"
+            class="w-1/2 py-2 text-white rounded-lg bg-zinc-800 hover:bg-zinc-500"
+          >
+            Login
+          </button>
+          <button
+            @click="signingUp"
+            class="w-1/2 py-2 text-white bg-blue-400 rounded-lg hover:bg-zinc-500"
+          >
+            Sign Up
+          </button>
+        </div>
+
         <button
           @click="google"
           class="flex justify-center py-2 bg-white rounded-lg hover:bg-gray-500"
