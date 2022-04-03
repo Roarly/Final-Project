@@ -1,12 +1,27 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { useForm, useField } from "vee-validate";
+import * as yup from "yup";
+
+const schema = yup.object({
+  username: yup.string().required().email().label("Email"),
+  password: yup.string().required().min(8).label("Password"),
+});
+
+useForm({
+  validationSchema: schema,
+});
+
+const { value: username, errorMessage: emailError } = useField("username");
+const { value: password, errorMessage: passwordError } = useField("password");
+
 import useAuth from "../composables/useAuth";
 import useError from "../composables/useError";
 
 const { isAuthenticated, login, signup, googleLogin } = useAuth();
-const username = ref("");
-const password = ref("");
+// const username = ref("");
+// const password = ref("");
 const router = useRouter();
 
 const logginIn = async () => {
@@ -49,17 +64,21 @@ const { ready, start } = useTimeout(3000, { controls: true });
       <img class="h-64" src="../assets/loginbg.png" alt="Hello BG" />
       <form @submit.prevent="logginIn" class="flex flex-col p-4 space-y-4">
         <input
+          name="username"
           type="text"
           class="p-2 border-2 rounded-lg"
-          placeholder="Username"
+          placeholder="Email"
           v-model="username"
         />
+
         <input
+          name="password"
           type="password"
           class="p-2 border-2 rounded-lg"
           placeholder="Password"
           v-model="password"
         />
+
         <div class="flex space-x-2">
           <button
             @submit.prevent="logginIn"
@@ -86,11 +105,25 @@ const { ready, start } = useTimeout(3000, { controls: true });
         </button>
       </form>
     </div>
-    <div
-      v-if="!ready && error"
-      class="w-1/3 p-3 text-center text-red-800 bg-red-300 rounded-lg my-70"
-    >
-      {{ error }}
+    <div class="flex flex-row">
+      <div
+        v-if="!ready && error"
+        class="w-1/3 mx-1 text-center text-red-800 bg-red-300 rounded-lg my-70"
+      >
+        {{ error }}
+      </div>
+      <div
+        v-if="emailError"
+        class="w-1/3 p-3 mx-1 text-center text-red-800 bg-red-300 rounded-lg my-70"
+      >
+        {{ emailError }}
+      </div>
+      <div
+        v-if="passwordError"
+        class="w-1/3 p-3 mx-1 text-center text-red-800 bg-red-300 rounded-lg my-70"
+      >
+        {{ passwordError }}
+      </div>
     </div>
   </div>
 </template>
