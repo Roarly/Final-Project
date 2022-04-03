@@ -4,10 +4,11 @@ import { useRouter } from "vue-router";
 import useAuth from "../composables/useAuth";
 import useError from "../composables/useError";
 
-const { isAuthenticated, login, signup } = useAuth();
+const { isAuthenticated, login, signup, googleLogin } = useAuth();
 const username = ref("");
 const password = ref("");
 const router = useRouter();
+
 const logginIn = async () => {
   await login(username.value, password.value);
   goToHome();
@@ -16,6 +17,11 @@ const logginIn = async () => {
 const signingUp = async () => {
   await signup(username.value, password.value);
   goToHome();
+};
+
+const google = async () => {
+  await googleLogin();
+  goToHome;
 };
 
 const goToHome = () => {
