@@ -57,7 +57,7 @@ const loggingOut = () => {
               ><li
                 class="px-5 py-4 bg-gray-300 hover:cursor-pointer hover:bg-slate-500 hover:text-white"
               >
-                Account
+                FAQ
               </li></router-link
             >
             <button @click="loggingOut">
