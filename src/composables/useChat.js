@@ -17,7 +17,7 @@ const messages = ref([]);
 const useChat = () => {
   const chatCollection = collection(db, "messages");
 
-  const chatQuery = query(chatCollection, orderBy("createdAt", "desc"));
+  const chatQuery = query(chatCollection, orderBy("createdAt", "asc"));
 
   const unsubscribe = onSnapshot(chatQuery, (querySnapshot) => {
     messages.value = [];
