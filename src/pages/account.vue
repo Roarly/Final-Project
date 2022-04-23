@@ -39,7 +39,7 @@ onUnmounted(() => {
     </ul>
     <div>
       <input
-        class="w-full p-3 rounded-lg focus:outline-none focus:bg-green-300"
+        class="w-full p-3 rounded-lg focus:outline-none focus:bg-gray-100"
         type="text"
         placeholder="Type a message..."
         v-model="newMessage"
