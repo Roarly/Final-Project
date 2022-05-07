@@ -5,14 +5,14 @@
       <h4 class="mb-5 text-3xl text-gray-700">Payment information</h4>
       <div class="p-10 bg-white rounded-md shadow-md">
         <div class="mb-6">
-          <label class="block mb-3 text-gray-600" for="">Name on card</label>
+          <label class="block mb-3 text-gray-600">Name on card</label>
           <input
             type="text"
             class="inline-block w-full px-3 py-2 tracking-wider text-gray-600 border border-gray-500 rounded-md"
           />
         </div>
         <div class="mb-6">
-          <label class="block mb-3 text-gray-600" for="">Card number</label>
+          <label class="block mb-3 text-gray-600">Card number</label>
           <input
             type="tel"
             class="inline-block w-full px-3 py-2 tracking-widest text-gray-600 border border-gray-500 rounded-md"
@@ -20,9 +20,7 @@
         </div>
         <div class="flex flex-wrap mb-6 -mx-3w-full">
           <div class="w-2/3 px-3">
-            <label class="block mb-3 text-gray-600" for=""
-              >Expiraion date</label
-            >
+            <label class="block mb-3 text-gray-600">Expiraion date</label>
             <div class="flex">
               <select
                 class="inline-block w-full px-3 py-2 mr-6 tracking-widest text-gray-600 border border-gray-500 rounded-md"
@@ -37,7 +35,7 @@
             </div>
           </div>
           <div class="w-1/3 px-3">
-            <label class="block mb-3 text-gray-600" for="">CVC</label>
+            <label class="block mb-3 text-gray-600">CVC</label>
             <input
               type="tel"
               class="inline-block w-full px-3 py-2 tracking-widest text-gray-600 border border-gray-500 rounded-md"
@@ -45,7 +43,7 @@
           </div>
         </div>
         <div class="mb-6 text-right">
-          <span class="font-bold text-right">{{ total }}USD</span>
+          <span class="font-bold text-right">USD</span>
         </div>
         <div>
           <button

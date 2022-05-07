@@ -21,7 +21,7 @@ onUnmounted(() => {
 <template>
   <h1 class="mt-8 text-6xl font-semibold tracking-tighter text-center">FAQ</h1>
   <div
-    class="flex flex-col justify-between float-right w-7/12 mt-8 mr-2 overflow-y-auto rounded-lg shadow-2xl h-96"
+    class="flex flex-col justify-between float-right w-7/12 mt-32 mr-2 overflow-y-auto rounded-lg shadow-2xl h-96"
   >
     <span class="text-xl font-semibold text-center bg-red-500 rounded-t-lg"
       ><h1>Customer Support Live Chat</h1></span
