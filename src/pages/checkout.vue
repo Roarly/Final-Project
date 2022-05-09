@@ -48,9 +48,9 @@
         <div>
           <button
             @click="finishPayment"
-            class="w-full px-4 py-3 font-semibold text-white bg-blue-500 rounded-md shadow-md text-ceenter"
+            class="w-full px-4 py-3 font-semibold text-center text-white bg-blue-500 rounded-md shadow-md hover:bg-sky-700"
           >
-            Confirm payment
+            Pay now
           </button>
         </div>
       </div>

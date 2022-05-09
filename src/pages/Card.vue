@@ -20,7 +20,7 @@ onUnmounted(() => {
 C/O https://placeholder.com/"
     />
     <span
-      >$ {{ products.Price }} - {{ products.Name }} - In Stock
+      >$ {{ products.Price }} - {{ products.ProductName }} - In Stock
       {{ products.Stock }}</span
     >
     <button
