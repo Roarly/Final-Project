@@ -3,8 +3,12 @@ import { onUnmounted, ref } from "vue";
 import useProducts from "../composables/useProducts";
 import useAuth from "../composables/useAuth";
 
-const { products } = useProducts();
+const { products, unsubscribe } = useProducts();
 const { user } = useAuth();
+
+onUnmounted(() => {
+  unsubscribe();
+});
 </script>
 
 <template>

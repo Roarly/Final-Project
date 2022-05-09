@@ -1,11 +1,14 @@
 import { ref } from "vue";
-import { collection, query, onSnapshot } from "firebase/firestore";
+import { collection, query, onSnapshot, where } from "firebase/firestore";
 
 import { db } from "./useFirebase";
 import useAuth from "./useAuth";
 import { async } from "@firebase/util";
 
 const { user } = useAuth();
+
+// const productRef = collection(db, "products");
+// const Price = query(productRef, where("Price", "==", true));
 
 const products = ref([]);
 
