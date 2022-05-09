@@ -1,11 +1,5 @@
 import { ref } from "vue";
-import {
-  collection,
-  query,
-  orderBy,
-  onSnapshot,
-  addDoc,
-} from "firebase/firestore";
+import { collection, query, onSnapshot } from "firebase/firestore";
 
 import { db } from "./useFirebase";
 import useAuth from "./useAuth";
@@ -23,7 +17,7 @@ const useProducts = () => {
     products.value = [];
     querySnapshot.forEach((doc) => {
       products.value.push({
-        key: doc.id,
+        id: doc.id,
         Price: doc.data().Price,
         ProductName: doc.data().ProductName,
         Stock: doc.data().Stock,

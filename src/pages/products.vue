@@ -7,10 +7,6 @@ import useAuth from "../composables/useAuth";
 
 const { products, unsubscribe } = useProducts();
 const { user } = useAuth();
-
-onUnmounted(() => {
-  unsubscribe();
-});
 </script>
 
 <template>
