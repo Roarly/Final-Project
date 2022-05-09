@@ -1,10 +1,21 @@
 <script setup>
 import Card from "./Card.vue";
+
+import { onUnmounted, ref } from "vue";
+import useProducts from "../composables/useProducts";
+import useAuth from "../composables/useAuth";
+
+const { products, unsubscribe } = useProducts();
+const { user } = useAuth();
+
+onUnmounted(() => {
+  unsubscribe();
+});
 </script>
 
 <template>
   <div class="container grid grid-cols-4 gap-8 mt-14">
-    <Card v-for="(n, index) in 16" :key="index" />
+    <Card v-for="product in products" :key="product.id" />
   </div>
 </template>
 

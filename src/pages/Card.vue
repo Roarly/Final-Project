@@ -1,17 +1,10 @@
-<script>
-/* import { Vue } from "vue";
+<script setup>
+import { onUnmounted, ref } from "vue";
+import useProducts from "../composables/useProducts";
+import useAuth from "../composables/useAuth";
 
-new Vue({
-  el: "#prod",
-  data: {
-    users: [
-      { name: "tshirt", price: "" },
-      { name: "sweater", price: "" },
-    ],
-  },
-}); */
-
-//having issues with vue being imported....
+const { products } = useProducts();
+const { user } = useAuth();
 </script>
 
 <template>
@@ -22,6 +15,10 @@ new Vue({
 
 C/O https://placeholder.com/"
     />
+    <span
+      >$ {{ products.Price }} - {{ products.Name }} - In Stock
+      {{ products.Stock }}</span
+    >
     <button
       type="submit"
       class="w-1/2 py-1 text-white bg-blue-500 rounded-lg hover:bg-zinc-500"
